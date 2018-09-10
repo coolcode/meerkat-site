@@ -24,7 +24,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function () {
-    return gulp.src('./scss/styles.scss')
+    return gulp.src('scss/styles.scss')
         .pipe(wait(250))
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./css'));
